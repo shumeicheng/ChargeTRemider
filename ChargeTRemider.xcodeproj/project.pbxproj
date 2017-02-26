@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F1E7E15A1E62137900E89C83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7E1591E62137900E89C83 /* AppDelegate.swift */; };
-		F1E7E15C1E62137900E89C83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7E15B1E62137900E89C83 /* ViewController.swift */; };
+		F1E7E15C1E62137900E89C83 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7E15B1E62137900E89C83 /* MainController.swift */; };
 		F1E7E15F1E62137900E89C83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1E7E15D1E62137900E89C83 /* Main.storyboard */; };
 		F1E7E1611E62137900E89C83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1E7E1601E62137900E89C83 /* Assets.xcassets */; };
 		F1E7E1641E62137900E89C83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1E7E1621E62137900E89C83 /* LaunchScreen.storyboard */; };
@@ -36,7 +36,7 @@
 /* Begin PBXFileReference section */
 		F1E7E1561E62137900E89C83 /* ChargeTRemider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChargeTRemider.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1E7E1591E62137900E89C83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F1E7E15B1E62137900E89C83 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F1E7E15B1E62137900E89C83 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		F1E7E15E1E62137900E89C83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F1E7E1601E62137900E89C83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1E7E1631E62137900E89C83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				F1E7E1591E62137900E89C83 /* AppDelegate.swift */,
-				F1E7E15B1E62137900E89C83 /* ViewController.swift */,
+				F1E7E15B1E62137900E89C83 /* MainController.swift */,
 				F1E7E15D1E62137900E89C83 /* Main.storyboard */,
 				F1E7E1601E62137900E89C83 /* Assets.xcassets */,
 				F1E7E1621E62137900E89C83 /* LaunchScreen.storyboard */,
@@ -262,7 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1E7E15C1E62137900E89C83 /* ViewController.swift in Sources */,
+				F1E7E15C1E62137900E89C83 /* MainController.swift in Sources */,
 				F1E7E15A1E62137900E89C83 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,6 +421,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "shumei.cheng.ca-gmail.com.ChargeTRemider";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -434,6 +435,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "shumei.cheng.ca-gmail.com.ChargeTRemider";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
