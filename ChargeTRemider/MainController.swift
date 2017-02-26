@@ -14,7 +14,7 @@ class MainController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        
+        message = ""
         NotificationCenter.default.addObserver(self, selector: #selector(MainController.checkBattery), name: NSNotification.Name.UIDeviceBatteryStateDidChange , object: nil)
         
         UIDevice.current.isBatteryMonitoringEnabled = true
@@ -26,8 +26,6 @@ class MainController: UIViewController {
         (granted, error) in
             if(granted){
                 let predicate = reminders.predicateForReminders(in: nil)
-                self.message = ""
-
                 reminders.fetchReminders(matching: predicate, completion:{ (allRemindres:[EKReminder]?)  -> Void in
                     for r:EKReminder in allRemindres!{
                         self.message = self.message! + "\n" + r.title
@@ -43,7 +41,9 @@ class MainController: UIViewController {
     }
   
    func showReminder( ) {
-    
+        if(message == "" ){
+            message = "There is no reminder."
+        }
         let alert = UIAlertController(title: "Reminders", message: message, preferredStyle: .alert)
         
         let ok = UIAlertAction(title: "Ok", style: .default, handler: {(action) in
@@ -59,6 +59,14 @@ class MainController: UIViewController {
         if(UIDevice.current.isBatteryMonitoringEnabled == true){
             if(UIDevice.current.batteryState != .unplugged){
                 checkReminder()
+            }else{
+                let alert = UIAlertController(title: "Your phone is not plugged in.", message: "Your phone is not recharging.", preferredStyle: .alert)
+                let ok = UIAlertAction(title: "ok", style: .default, handler: {
+                (action) in
+                    alert.dismiss(animated: true, completion: nil)
+                })
+               alert.addAction(ok)
+               present(alert, animated: true, completion: nil)
             }
         }
 
